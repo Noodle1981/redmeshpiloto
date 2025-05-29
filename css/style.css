@@ -1,0 +1,132 @@
+:root {
+    --color-primario: #e79a51; /* Azul oscuro */
+    --color-secundario: #cce5ff; /* Azul claro para fondos */
+    --color-texto: #333;
+    --color-alerta: #dc3545; /* Rojo para alertas */
+    --fuente-principal: Arial, sans-serif;
+    --padding-general: 15px;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    color: var(--color-texto);
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: var(--padding-general);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline-block; /* o usar flexbox en el ul */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-secundario);
+}
+
+.ultima-actualizacion {
+    font-size: 0.8em;
+    text-align: right;
+    padding-right: var(--padding-general);
+}
+
+main {
+    padding: var(--padding-general);
+    max-width: 900px; /* O el ancho que prefieras */
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+section:last-child {
+    border-bottom: none;
+}
+
+article {
+    background-color: var(--color-secundario);
+    padding: var(--padding-general);
+    border-radius: 5px;
+    margin-top:10px;
+}
+
+footer {
+    text-align: center;
+    padding: var(--padding-general);
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex; /* Para alinear el logo y el texto fácilmente */
+    align-items: center; /* Centra verticalmente los ítems */
+    justify-content: center; /* Centra horizontalmente el contenido (puedes cambiarlo) */
+    gap: 15px; /* Espacio entre el logo y el texto */
+    flex-wrap: wrap; /* Si no caben en una línea, que pasen a la siguiente */
+}
+
+.footer-logo {
+    height: 40px; /* Ajusta la altura según el tamaño de tu logo y diseño */
+    width: auto;  /* Mantiene la proporción */
+    border-radius: 20%;
+    /* Si quieres que el logo esté a la izquierda y el texto a la derecha dentro del footer-content:
+       .footer-content { justify-content: space-between; } o usa márgenes.
+    */
+}
+
+footer p { /* Puede que necesites ajustar el margen del párrafo si no usas flexbox en footer-content */
+    margin: 0;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    nav ul li {
+        display: block; /* Menú tipo hamburguesa podría ser más avanzado */
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column; /* Apila el logo y el texto verticalmente */
+        gap: 10px;
+    }
+    .footer-logo {
+        height: 30px; /* Un poco más pequeño en móviles */
+    }
+}

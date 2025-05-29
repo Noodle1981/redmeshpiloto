@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión Antisísmica San Juan - Información de Emergencia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/Logo-SJ.png" alt="Logo Emergencia San Juan">
+            <h1>Conexión Antisísmica San Juan</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="comunicados.html">Comunicados</a></li>
+                <li><a href="refugios.html">Refugios y Ayuda</a></li>
+                <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            </ul>
+        </nav>
+        <p class="ultima-actualizacion">Última actualización: <span id="fecha-actualizacion-general">--/--/---- --:--</span></p>
+    </header>
+
+    <main>
+    <section id="todos-los-comunicados">
+        <h2>Todos los Comunicados Oficiales</h2>
+        <div id="lista-comunicados-contenedor">
+            <!-- El JS llenará esto -->
+            <p>Cargando comunicados...</p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+         <div class="footer-content">
+        <img src="img/logomeshsanjuan.png" alt="Logo Red Mesh San Juan" class="footer-logo">
+        <p>© <span id="current-year"></span> Grupo Impulsor Red Mesh San Juan. Información de emergencia.</p>
+    </div>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/data_manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
